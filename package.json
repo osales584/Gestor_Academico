@@ -1,0 +1,21 @@
+{
+  "name": "gestor_academico",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "Oliver Sales",
+  "license": "ISC",
+  "description": "gestor_academico",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.7",
+    "morgan": "^1.10.0"
+  }
+}
