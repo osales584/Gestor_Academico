@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "e948ec3e-4ab9-4922-a68f-146aa0e3f6fb",
+		"name": "gestorAcademico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37645671"
+	},
+	"item": [
+		{
+			"name": "TEACHER",
+			"item": [
+				{
+					"name": "Crear Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Informatica\",\r\n    \"description\": \"El curso de informatica es un area importante\",\r\n    \"teacher\": \"67a8f764fd752841b66c869e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/createCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"createCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIgIiwiaWF0IjoxNzM5MTU1OTk5LCJleHAiOjE3MzkxNTk1OTl9.0LPzC4CRP6FVmfNnHWRb-TobTp-TTTUNI3LvTZ2g7MQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lenguaje\",\r\n    \"description\": \"El curso de lenguaje es un area importante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/updateCourse/67a8f657fd752841b66c869a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"updateCourse",
+								"67a8f657fd752841b66c869a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/deleteCourse/67a8f805fd752841b66c86a1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"deleteCourse",
+								"67a8f805fd752841b66c86a1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STUDENT",
+			"item": [
+				{
+					"name": "Asignación de Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIgIiwiaWF0IjoxNzM5MTQ5NDI1LCJleHAiOjE3MzkxNTMwMjV9.2m_qP-7ymg1-pmdhRmqK2uYyP4tQh2pf54LHLnxHxuI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\": \"67a8f657fd752841b66c869a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/assignCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"assignCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Perfil",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ricardo\",\r\n  \"surname\": \"Torres\",\r\n  \"email\": \"richi@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"STUDENT_ROLE\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/updateProfile/67a8fa8b58033f262713f44a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"updateProfile",
+								"67a8fa8b58033f262713f44a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Perfil",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/deleteProfile/67a93e598e27366474dc75e6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"deleteProfile",
+								"67a93e598e27366474dc75e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Registrar Profesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Oliver\",\r\n  \"surname\": \"Sales\",\r\n  \"email\": \"oliver@example.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"TEACHER_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/register/teacher",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"register",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Estudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Williams\",\r\n  \"surname\": \"Palacios\",\r\n  \"email\": \"willi@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"STUDENT_ROLE\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/register/student",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"register",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"oliver@example.com\",\r\n    \"password\": \"12345678\",\r\n    \"role\": \"TEACHER_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
